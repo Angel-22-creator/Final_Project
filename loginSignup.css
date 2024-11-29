@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --clr-white: #fff;
+    --clr-black: #222;
+
+    --crl-gray: #5d5d5d;
+    --clr-brown: #a98700;
+
+    --fnt-primary: "Roboto", sans-serif;
+    --fnt-seconday: "Poppins", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fnt-seconday);
+    background-color: var(--clr-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the login form */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgb(21, 21, 21);
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.sign-up-container{
+    width: 100%;
+    top: 40px;
+    position: relative;
+    max-width: 400px;
+    background-color: rgb(21, 21, 21);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title styling */
+h2 {
+    position: relative;
+    left: -100px;
+    font-size: 40px;
+    color: var(--clr-white);
+    margin-bottom: 20px;
+    font-family: var(--fnt-primary);
+}
+
+/* Form input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--crl-gray);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    z-index: 10000;
+    position: relative;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--clr-brown);
+    background-color: var(--crl-gray);
+    color: white;
+}
+
+::placeholder {
+    color: var(--clr-white);
+    opacity: 0.8; /* Firefox */
+  }
+
+
+/* Submit button styling */
+.submitbtn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--clr-brown);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitbtn:hover {
+    background-color: #bca032;
+}
+
+/* Link styling */
+p {
+    margin-top: 10px;
+    color: var(--clr-white);
+}
+
+p a {
+    color: #efcd43;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: var(--clr-white);
+    
+}
+
+.rb{
+    position: absolute;
+    top: 50px;
+    right: 400px;
+    width: 350px;
+    transform: rotate(60deg);
+    z-index: -10;
+    animation: rbmoving 3s ease-in;
+}
+
+.rb-sign{
+    position: absolute;
+    top: 50px;
+    right: 400px;
+    width: 350px;
+    transform: rotate(60deg);
+    z-index: -10;
+    animation: rbmoving 3s ease-in;
+}
+
+
+
+@keyframes rbmoving {
+    0%{
+        transform: rotate(60deg);
+        right: 430px;
+    }60%{
+        transform: rotate(75deg);
+        right: 400px;
+    }100%{
+        transform: rotate(60deg);
+        right: 400px;
+    }
+}
+.hand-sign{
+    top: 175px;
+    width: 200px;
+    z-index: 1;
+    transform: rotate(90deg);
+}
+
+.logo{
+    display: inline;
+    width: 100px;
+}

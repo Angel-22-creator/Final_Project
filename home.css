@@ -1,0 +1,720 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --clr-white: #fff;
+    --clr-black: #222;
+
+    --crl-gray: #5d5d5d;
+    --clr-brown: #a98700;
+
+    --fnt-primary: "Roboto", sans-serif;
+    --fnt-seconday: "Poppins", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fnt-seconday);
+    background-color: var(--clr-black);
+    height: 100vh;
+}
+
+
+.logo{
+    width: 100px;
+    position: absolute;
+    left: 10px;
+}
+
+.top-nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+    background-color: var(--clr-black);
+    z-index: 100px;
+  }
+  
+.top-nav  li {
+    float: right;
+  }
+  
+  .top-nav  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .top-nav  li a:hover:not(.active) {
+    background-color: #878686;
+    border-radius: 10px;
+  }
+
+  .dropdown-content a:hover:not(:nth-child(3)):not(:nth-child(4)) {
+    background-color: var(--crl-gray);
+    color: white;
+    border-radius: 10px;
+}
+
+
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--crl-gray);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: var(--colorOnblack);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.intro{
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.intro-box{
+    width: 40%;
+    height: 500px;
+    top: 10%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .intro-box h2{
+    position: relative;
+    top: 120px;
+    color: white;
+    font-weight: 500;
+   font-size: 40px;
+  }
+
+  
+  .intro-box p{
+    position: relative;
+    color: rgb(131, 131, 131);
+    top: 120px;
+   font-size: 20px;
+  }
+
+  .intro-box button{
+    position: relative;
+    color: white;
+    top: 300px;
+    padding: 10px 50px;
+   font-size: 20px;
+   border: 4px;
+   border-radius: 5px;
+   font-weight: 600;
+   border: none;
+   background-color: var(--clr-brown);
+  }
+
+  .intro-box button:hover{
+    position: relative;
+    color: white;
+    top: 300px;
+    padding: 10px 50px;
+   font-size: 20px;
+   border: 4px;
+   border-radius: 5px;
+   font-weight: 600;
+   border: none;
+   background-color: #cca60c;
+  }
+
+  
+  .intro-box img{
+    position: absolute;
+    right: 40%;
+    top: 30px;
+    width: 100px;
+    animation: movingrb 1s infinite;
+  }
+
+  @keyframes movingrb {
+     0%{
+        transform: rotate(20deg);
+     }50%{
+        transform: rotate(-20deg);
+     }100%{
+        transform: rotate(20deg);
+     }
+  }
+
+  .popup {
+    display: block; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    height: 150px;
+    position: relative;
+    margin: 250px auto;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#exit{
+    position: absolute;
+    right: 50px;
+    margin: 20px;
+    background-color: none;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+    border: none;
+} 
+
+#exit:hover{
+    position: absolute;
+    right: 50px;
+    margin: 20px;
+    background-color: none;
+    font-size: 20px;
+
+    padding: 10px;
+    color: rgb(83, 83, 83);
+    background: rgba(0, 0, 0, 0.9);
+}  
+
+.btn-rate{
+    position: relative;
+    top: 40px;
+    left: -100px;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--clr-brown);
+}
+
+.hidden {
+    display: none;
+}
+
+.emotion-btn {
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top:20px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"] { 
+    position: relative;
+    top: 10px;
+    margin: auto;
+    -webkit-appearance: none;
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    width: 200px;
+    left: 50px;
+    cursor: pointer;
+    border-radius: 0; /* iOS */
+}
+
+#intensity-value{
+    position: relative;
+    left: 55px;
+    top: 3px;
+    font-family: var(--fnt-primary);
+    font-size: 20px;
+}
+
+textarea {
+    width: 100%; /* Full width */
+    height: 50px;
+    padding: 10px; /* Add some padding */
+    font-size: 16px; /* Make the text readable */
+    font-family: var(--fnt-seconday); /* Use a clean font */
+    color: #333; /* Text color */
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+    resize: vertical; /* Allow vertical resizing only */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+textarea:focus {
+    box-shadow: 0 0 5px #5c5c5c; /* Blue glow on focus */
+    background-color: #fff; /* White background on focus */
+}
+
+textarea::placeholder {
+    color: #aaa; /* Lighter color for placeholder text */
+    font-style: italic; /* Italic style for placeholder */
+}
+
+.btn-text{
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--clr-brown);
+    top: -5px;
+    transition: background-color 0.3s ease;
+}
+
+::-webkit-slider-runnable-track {
+    background: #ddd;
+}
+
+/*
+ * 1. Set to 0 width and remove border for a slider without a thumb
+ * 2. Shadow is negative the full width of the input and has a spread 
+ *    of the width of the input.
+ */
+::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* 1 */
+    height: 30px;
+    background: #fff;
+    box-shadow: -200px 0 0 200px #434343; /* 2 */
+    border: 2px solid #999; /* 1 */
+}
+
+::-moz-range-track {
+    height: 40px;
+    background: #ddd;
+}
+
+::-moz-range-thumb {
+    background: #fff;
+    height: 40px;
+    width: 20px; /* 1 */
+    border: 3px solid #999; /* 1 */
+    border-radius: 0 !important;
+    box-shadow: -200px 0 0 200px dodgerblue;
+    box-sizing: border-box;
+}
+
+::-ms-fill-lower { 
+    background: dodgerblue;
+}
+
+::-ms-thumb { 
+    background: #fff;
+    border: 2px solid #999; /* 1 */
+    height: 40px;
+    width: 20px; /* 1 */
+    box-sizing: border-box;
+}
+
+::-ms-ticks-after { 
+    display: none; 
+}
+
+::-ms-ticks-before { 
+    display: none; 
+}
+
+::-ms-track { 
+    background: #ddd;
+    color: transparent;
+    height: 40px;
+    border: none;
+}
+
+::-ms-tooltip { 
+    display: none;
+}
+
+.emotion-btn:hover {
+    background-color: #ddd;
+}
+
+.happy{
+    background-color: #ffd21f;
+}
+
+.sad{
+    background-color: #5c5c5c;
+}
+
+.angry{
+    background-color: #a66400;
+}
+
+.excited{
+    background-color: orange;
+}
+
+.love{
+    background-color: rgb(255, 45, 45);
+}
+
+.container {
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    margin: 0px auto;
+    background-color: rgba(22, 22, 22, 0.5);
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-act{
+    color: white;
+    position: relative;
+    width: 550px;
+    left: -100px;
+    height: 340px;
+    border-radius: 10px;
+    margin: 0px auto;
+    background-color: rgba(22, 22, 22, 0.5);
+    height: 250px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-act h1{
+    color: white;
+    position: relative;
+    font-size: 20px;
+    top: -10px;
+}
+
+#emotionBarChart{
+    position: relative;
+    top: 30px;
+    color: white;
+}
+
+#emotionBar2Chart{
+    position: relative;
+    top: 30px;
+    color: white;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.grid-container {
+    left: 20%;
+    top: 10%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2,450px);
+    gap: 20px;
+  }
+  
+  .column {
+    border-radius: 8px;
+  }
+
+  
+.Happy{
+    color: #ffd21f;
+}
+
+.Sad{
+    color: #4d50ff;
+}
+
+.Angry{
+    color: #fc3200;
+}
+
+.Excited{
+    color: #ff9500;
+}
+
+.Love{
+    color: rgb(244, 33, 103);
+}
+
+.moodtoday h2{
+    top: 30px;
+    font-size: 30px;
+    color: whitesmoke;
+    position: relative;
+}
+
+.moodtoday .em{
+    top: 30px;
+    font-size: 70px;
+    font-weight: 600;
+    position: relative;
+}
+
+.moodtoday .dt{
+    top: 70px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #878686;
+    position: relative;
+}
+
+.moodtoday .mq{
+    top: 90px;
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    position: relative;
+}
+
+.inten-container {
+    position: relative;
+    top: 20px;
+    left: -20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+.inten-container-history{
+    position: relative;
+    top: -10px;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 400px ;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.day-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.day-box-history {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    border-radius: 10px;
+}
+
+.inten{
+    font-size: 20px;
+    color: var(--clr-white);
+}
+
+.high{
+    position: relative;
+    display: block;
+    top: 20px;
+    font-size: 20px;
+}
+
+.high-history{
+    position: relative;
+    display: block;
+    top: 0px;
+    font-size: 20px;
+}
+
+.container-his{
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin: 0px auto;
+    padding: 30px;
+}
+
+.bullet{
+    position: relative;
+    list-style: none;
+    top: 160px;
+    font-size: 12px;
+    gap: 10px;
+    display: flex; 
+}
+
+.bullet li{
+    padding-left: 0px;
+}
+
+.bullet .Happy-p{
+    border-radius: 4px;
+    padding: 5px 12px;
+    background-color: #ffcc00;
+    color: white;
+}
+
+.bullet .Love-p{
+    border-radius: 4px;
+    padding: 5px 12px;
+    background-color: #ff009d;
+    color: white;
+}
+
+.bullet .Sad-p{
+    border-radius: 4px;
+    padding: 5px 12px;
+    background-color: #001aff;
+    color: white;
+}
+
+.bullet .Excited-p{
+    border-radius: 4px;
+    padding: 5px 12px;
+    background-color: #ff8400;
+    color: white;
+}
+
+.bullet .Angry-p{
+    border-radius: 4px;
+    padding: 5px 12px;
+    background-color: #e30f00;
+    color: white;
+}
+
+#emotionPieChart{
+    position: relative;
+    top: 10px;
+    left: 120px;
+}
+
+#emotionDoughnutChart{
+    position: relative;
+    left: 80px;
+}
+
+.piecontainer{
+    width: 230px;
+    position: relative;
+    left: 30px;
+}
+
+.piecontainer h1{
+    position: relative;
+    font-size: 20px;
+    left: 50px;
+    color: white;
+}
+
+.center-no{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: -100px;
+}
+
+.no-data-image{
+    width: 100px;
+    top: -100px;
+    position: relative;
+    animation: moverb 1s infinite;
+}
+
+@keyframes moverb {
+    0%{
+        top: -100px;
+    }70%{
+        top: -150px;
+    }
+    100%{
+        top: -100px;
+    }
+}
+
+.no-data-h2{
+    color: var(--crl-gray);
+    position: absolute;
+}
+
+
+.inten-history{
+    position: relative;
+    top: -10px;
+    left: 75px;
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+.bullet-history{
+    position: relative;
+    list-style: none;
+    top: -5px;
+    left: 78px;
+    font-size: 12px;
+    gap: 10px;
+    display: flex; 
+}
